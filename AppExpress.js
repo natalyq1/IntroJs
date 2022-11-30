@@ -38,6 +38,10 @@ appe.get("/",(req,res)=> {
 appe.get("/direction",(req,res)=> {//envia a /home cuando pongo /direction
     res.redirect("/home") //clase respuesta
 }) 
+
+//aca le digo a express que lea formato JSON
+appe.use(express.json())
+
 //aca se usa lo que deje en UserRouter, que es todo lo referente a usuario
 appe.use("/user", UserRouter)
 
